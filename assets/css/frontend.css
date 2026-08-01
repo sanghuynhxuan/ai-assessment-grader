@@ -1,0 +1,42 @@
+/* Styling cho Box Feedback */
+.ld-ai-feedback-box {
+    margin-bottom: 20px;
+}
+.ld-ai-rate-btn {
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.ld-ai-rate-btn:hover {
+    background: #eee;
+}
+
+/* --- QUAN TRỌNG: OVERRIDE MÀU SẮC KHI AI CHẤM ĐÚNG --- */
+
+/* Khi container cha có class wpProQuiz_answerCorrect (do JS thêm vào) */
+.wpProQuiz_questionListItem.wpProQuiz_answerCorrect input[type="text"],
+.wpProQuiz_questionListItem.wpProQuiz_answerCorrect textarea {
+    background-color: #e8f5e9 !important; /* Màu xanh nhạt */
+    border-color: #4caf50 !important;      /* Viền xanh lá */
+    color: #2e7d32 !important;             /* Chữ xanh đậm */
+}
+
+/* Ẩn dấu check/cross mặc định nếu cần thiết */
+.wpProQuiz_questionListItem.wpProQuiz_answerCorrect .wpProQuiz_questionIncorrect {
+    display: none !important;
+}
+
+/* Hiện nhãn Correct */
+.wpProQuiz_questionListItem.wpProQuiz_answerCorrect .ld-quiz-question-item__status--correct {
+    display: inline-block !important;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* Khi câu hỏi đã được AI chấm là đúng, ẩn tuyệt đối dòng hiển thị đáp án của LearnDash */
+.wpProQuiz_questionListItem.wpProQuiz_answerCorrect .wpProQuiz_freeCorrect {
+    display: none !important;
+}

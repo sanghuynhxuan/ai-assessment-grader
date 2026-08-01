@@ -1,0 +1,26 @@
+{
+  "name": "huynhxuansang/learndash-ai-grader",
+  "description": "LearnDash plugin integrating multiple LLM APIs for intelligent student feedback.",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Huynh Xuan Sang",
+      "email": "dev@example.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "guzzlehttp/guzzle": "^7.8",
+    "woocommerce/action-scheduler": "^3.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "LearnDashAIGrader\\": "includes/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}
